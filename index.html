@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskManager Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">🟣 TaskManager</div>
+    <nav class="navbar">
+      <a href="#" class="active">Dashboard</a>
+      <a href="#">Tasks</a>
+      <a href="#">Profile</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- Create New Task -->
+    <section class="create-task">
+      <h2>📝 Create New Task</h2>
+      <form>
+        <label>Task Name*</label>
+        <input type="text" required>
+
+        <label>Assignee Email*</label>
+        <input type="email" required>
+
+        <label>Due Date*</label>
+        <input type="date" required>
+
+        <label>Due Time</label>
+        <input type="time">
+
+        <label>Priority Level*</label>
+        <select>
+          <option>Low Priority</option>
+          <option>Medium Priority</option>
+          <option>High Priority</option>
+        </select>
+
+        <label>Estimated Hours</label>
+        <input type="number" placeholder="e.g. 10">
+
+        <label>Project URL</label>
+        <input type="url">
+
+        <label>Task Description</label>
+        <textarea rows="4"></textarea>
+
+        <label>Task Progress</label>
+        <input type="range" value="0">
+
+        <label>Task Color</label>
+        <input type="color" value="#000000">
+
+        <label>Task Type</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Bug Fix</label>
+          <label><input type="checkbox"> Feature</label>
+          <label><input type="checkbox"> Enhancement</label>
+        </div>
+
+        <label>Status</label>
+        <div class="radio-group">
+          <label><input type="radio" name="status"> Pending</label>
+          <label><input type="radio" name="status"> In Progress</label>
+          <label><input type="radio" name="status"> Completed</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">✔ Create Task</button>
+        <button type="reset" class="btn btn-reset">✖ Reset</button>
+      </form>
+    </section>
+
+    <!-- Active Tasks -->
+    <section class="active-tasks">
+      <h2>✅ Active Tasks</h2>
+      <div class="task-grid">
+        <div class="task-card high">
+          <h3>Design Homepage Mockup</h3>
+          <p>Create wireframes and high-fidelity mockups for redesign project.</p>
+          <p>📅 Due: Oct 20, 2025</p>
+          <p>👤 Sarah Johnson</p>
+          <span class="badge high">High</span>
+          <span class="status progress">In Progress</span>
+        </div>
+
+        <div class="task-card medium">
+          <h3>Update Documentation</h3>
+          <p>Review and update API documentation.</p>
+          <p>📅 Due: Oct 25, 2025</p>
+          <p>👤 Emily Rodriguez</p>
+          <span class="badge medium">Medium</span>
+          <span class="status progress">In Progress</span>
+        </div>
+
+        <div class="task-card low">
+          <h3>Implement Dark Mode</h3>
+          <p>Add dark theme support across app.</p>
+          <p>📅 Due: Nov 5, 2025</p>
+          <p>👤 Alex Thompson</p>
+          <span class="badge low">Low</span>
+          <span class="status pending">Pending</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-col">
+      <h3>TaskManager</h3>
+      <p>Organize your work and life, finally.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Features</h4>
+      <ul>
+        <li>Task Management</li>
+        <li>Team Collaboration</li>
+        <li>Analytics</li>
+        <li>Integrations</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li>Documentation</li>
+        <li>Tutorials</li>
+        <li>API Reference</li>
+        <li>Support</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Careers</li>
+        <li>Privacy Policy</li>
+        <li>Terms of Service</li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
