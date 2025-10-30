@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TaskManager</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/665eca08a4.js" crossorigin="anonymous"></script>
 </head>
@@ -40,11 +40,11 @@
                 <h4>📝Create New Task</h4>
                 <form action="">
                     <div class="inputs">
-                        <input type="text" name="task name"  placeholder="Task Name *" class="inpt" id="red">
+                        <input type="text" name="task name"  placeholder="Task Name *" class="inpt" id="red" required>
                         
                     </div>
                     <div class="inputs">
-                        <input type="email" name="email" placeholder="Assignee Email *" class="inpt" id="red">
+                        <input type="email" name="email" placeholder="Assignee Email *" class="inpt" id="red" required>
                     </div>
 
 
@@ -52,7 +52,7 @@
                     <div class="inputs">
                         <div class="upper">
                             <label for="due date"> Due Date *</label>
-                            <input type="date" name="due date" placeholder="dd/mm/yyyy" class="inpt" id="red">
+                            <input type="date" name="due date" placeholder="dd/mm/yyyy" class="inpt" id="red" required>
                             
                         </div>
             
@@ -63,6 +63,7 @@
                         <div class="upper">
                             <label for="due time">Due Time</label>
                             <input type="time" name="due time" class="inpt">
+                            
                         </div>
 
                     </div>
@@ -71,7 +72,7 @@
                     <div class="inputs">
                         <div class="upper">
                             <label for="priority">Priority Level *</label>
-                            <select name="level" id="select" class="inpt">
+                            <select name="level" id="select" class="inpt" required>
                                 <option value="low priority" id="select">Low Priority</option>
                                 <option value="medium priority">Medium Priority</option>
                                 <option value="high priority">High Priority</option>
@@ -84,7 +85,7 @@
                     <div class="inputs">
                         <div class="upper">
                             <label for="estimate hour">Estimated Hours</label>
-                            <input type="text" name="estimate hours" value="54" class="inpt">
+                            <input type="number" id="hours" name ="hours" value="54" class="inpt" min="0">
 
                         </div>
                     </div>
@@ -110,7 +111,8 @@
 
                     <div class="inputs" id="color">
                         <label for="task color"   class="lab">Task Color</label>
-                        <div id="di"></div>
+                        <input type="color" id="di">
+                        
                     </div>
 
 
@@ -120,15 +122,15 @@
                        <div class="checks">
 
                         <div class="check">
-                            <input type="checkbox"  name="task type" value="Bug fix" class="che" checked><label for="bug" class="label">Bug Fix</label>
+                            <input type="checkbox"  name="task type" id="bug fix"><label for="bug fix">Bug Fix</label>
 
                         </div>
                         <div class="check">
-                            <input type="checkbox" name="task type"  value="Feature" class="che"><label for="feature" class="label">Feature</label>
+                            <input type="checkbox" name="task type"  id="feature"><label for="feature">Feature</label>
 
                         </div>
                         <div class="check">
-                            <input type="checkbox" name="task type" value="Enhancement" class="che"><label for="enhancement" class="label">Enhancement</label>
+                            <input type="checkbox" name="task type" id="enhancement"><label for="enhancement">Enhancement</label>
 
                         </div>
                        </div>
@@ -142,14 +144,14 @@
                             
                             <div class="check">
     
-                                <input type="radio" name="Status" value="pending"><label for="pending" class="label">Pending</label>
+                                <input type="radio" id="pending" name="Status"><label for="pending">Pending</label>
                             </div>
                             <div class="check">
-                                <input type="radio" name="Status" value="in progress"><label for="in progress" class="label">In Progress</label>
+                                <input type="radio" id="In progress" name="Status"><label for="In progress">In Progress</label>
     
                             </div>
                             <div class="check">
-                                <input type="radio" name="Status" value="completed"><label for="completed" class="label">Completed</label>
+                                <input type="radio" id="completed" name="Status"><label for="completed">Completed</label>
     
                             </div>
                         </div>
