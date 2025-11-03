@@ -35,8 +35,8 @@
     <div class="main">
         <h1 class="h1"><span class="task"></span>Task Dashboard</h1>
 
-        <div class="sub-main">
-            <div class="left">
+        <div class="container">
+            <div class="container-left">
                 <h4>📝Create New Task</h4>
                 <form action="">
                     <div class="inputs">
@@ -85,7 +85,7 @@
                     <div class="inputs">
                         <div class="upper">
                             <label for="estimate hour">Estimated Hours</label>
-                            <input type="number" id="hours" name ="hours" value="54" class="inpt" min="0">
+                            <input type="number" id="inpt" name =" estimate hours" value="" class="inpt" min="0" onkeydown="return !['e','E','+','-'].includes(event.key)">
 
                         </div>
                     </div>
@@ -105,11 +105,12 @@
 
                     <div class="inputs">
                         <label for="task progress" class="lab">Task Progress</label>
-                        <input type="range" name="task progress"  min="0" max="100"  id="progress">
+                        <input type="range" name="task progress"  min="0" max="100" class="inpt" id="progress">
+
                         <p>0%</p>
                     </div>
 
-                    <div class="inputs" id="color">
+                    <div class="input" id="color">
                         <label for="task color"   class="lab">Task Color</label>
                         <input type="color" id="di">
                         
@@ -117,19 +118,19 @@
 
 
 
-                    <div class="inputs" id="inputs">
+                    <div class="input" id="inputs">
                        <label for="task" id="task">Task Type</label>
-                       <div class="checks">
+                       <div class="checkbox-field">
 
-                        <div class="check">
+                        <div class="check-box">
                             <input type="checkbox"  name="task type" id="bug fix"><label for="bug fix">Bug Fix</label>
 
                         </div>
-                        <div class="check">
+                        <div class="check-box">
                             <input type="checkbox" name="task type"  id="feature"><label for="feature">Feature</label>
 
                         </div>
-                        <div class="check">
+                        <div class="check-box">
                             <input type="checkbox" name="task type" id="enhancement"><label for="enhancement">Enhancement</label>
 
                         </div>
@@ -140,17 +141,17 @@
 
                     <div class="inputs" id="inputs">
                             <label for="Status">Status</label>
-                        <div class="checks">
+                        <div class="checkbox-field">
                             
-                            <div class="check">
+                            <div class="check-box">
     
                                 <input type="radio" id="pending" name="Status"><label for="pending">Pending</label>
                             </div>
-                            <div class="check">
+                            <div class="check-box">
                                 <input type="radio" id="In progress" name="Status"><label for="In progress">In Progress</label>
     
                             </div>
-                            <div class="check">
+                            <div class="check-box">
                                 <input type="radio" id="completed" name="Status"><label for="completed">Completed</label>
     
                             </div>
@@ -161,7 +162,7 @@
                         <div class="upload">
                             <label for="file-upload" class="file-upload">
                                 <div class="text"><i class="fa-solid fa-paperclip"></i>Click to upload attachments</div>
-                                <div class="supported">Supported: PDF, DOC, Images</div>
+                                <div class="pdf">Supported: PDF, DOC, Images</div>
                                 <input type="file" id="file-upload" class="fileinput" accept=".pdf,.doc,.docx,image/*" multiple>
                             </label>
                         </div>
@@ -177,7 +178,7 @@
                 </form>
 
             </div>
-            <div class="right">
+            <div class="container-right">
                 <div class="head">
                     <h2>✅Active Tasks</h2>
                     <nav>
@@ -351,4 +352,4 @@
         </div>
     </footer>
 </body>
-</html>
+</html> 
